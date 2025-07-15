@@ -1,0 +1,252 @@
+Generated html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos básicos (sin cambios) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="XMOSS Service ofrece plantillas de menú digital innovadoras con códigos QR y hosting. Moderniza tu restaurante con nosotros.">
+    <meta name="keywords" content="menu digital, codigo QR, restaurante, plantillas menu, hosting menu, XMOSS Service">
+    <meta name="author" content="XMOSS Service">
+    <meta property="og:title" content="XMOSS Service - Menús Digitales Innovadores">
+    <meta property="og:description" content="Transforma la experiencia de tus clientes con menús digitales accesibles mediante QR, ofrecidos por XMOSS Service.">
+    <meta property="og:image" content="images/hero-background.jpg">
+    <meta property="og:url" content="https://www.tu-dominio-xmoss.com">
+    <meta property="og:type" content="website">
+
+    <title>XMOSS Service</title>
+
+    <!-- ==== CAMBIO: Enlace a la hoja de estilos de Bootstrap 5 ==== -->
+    <!-- Se añade el CDN de Bootstrap. Se coloca ANTES de tu CSS personalizado para que puedas sobrescribir sus estilos. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Enlace a tu hoja de estilos CSS personalizada (se mantiene) -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <!-- ==== CAMBIO: Barra de Navegación con Bootstrap 5 ==== -->
+    <!-- Se reemplaza tu header personalizado por el componente 'navbar' de Bootstrap. -->
+    <!-- 'navbar-expand-lg': el menú se colapsará en pantallas más pequeñas que 'large' (992px). -->
+    <!-- 'navbar-dark bg-dark': estilo de texto claro sobre fondo oscuro. -->
+    <!-- 'fixed-top': mantiene la barra fija en la parte superior. -->
+    <header id="main-header">
+        <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#inicio">
+                    <img src="images/logo.png" alt="Logo XMOSS Service" style="height: 50px;">
+                </a>
+
+                <!-- Botón Hamburguesa de Bootstrap (se activa en pantallas pequeñas) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Contenedor de enlaces que se colapsará -->
+                <div class="collapse navbar-collapse" id="nav-content">
+                    <ul class="navbar-nav ms-auto"> <!-- 'ms-auto' alinea los enlaces a la derecha -->
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección 1: Introducción (Hero) -->
+        <!-- ==== CAMBIO: Estructura con clases de Flexbox de Bootstrap ==== -->
+        <!-- 'd-flex', 'align-items-center' para centrar verticalmente el contenido. -->
+        <!-- 'text-white' para el color del texto. -->
+        <section id="inicio" class="hero-section d-flex align-items-center text-white">
+            <div class="container text-center">
+                <!-- 'display-*' es una clase de Bootstrap para títulos grandes y destacados. -->
+                <h1 class="display-4 fw-bold">Transforma la Experiencia de tus Clientes con Menús Digitales</h1>
+                <p class="lead">En XMOSS Service, creamos menús digitales elegantes y funcionales con códigos QR, incluyendo hosting. ¡Moderniza tu restaurante hoy mismo!</p>
+                <!-- ==== CAMBIO: Clases de Botón de Bootstrap ==== -->
+                <!-- Se usan las clases 'btn' y 'btn-lg' de Bootstrap. El color 'btn-primary' lo definiremos en nuestro CSS. -->
+                <a href="#precios" class="btn btn-primary btn-lg">
+                    Ver Paquetes
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección 2: Beneficios -->
+        <!-- ==== CAMBIO: Usando la Grid de Bootstrap en lugar de .benefits-grid ==== -->
+        <section id="beneficios" class="py-5"> <!-- 'py-5' añade padding vertical de Bootstrap -->
+            <div class="container">
+                <h2 class="text-center mb-5">¿Por qué Elegir XMOSS Service?</h2>
+                <!-- 'row' es el contenedor de la grilla. 'g-4' añade un espaciado (gap) entre las columnas. -->
+                <div class="row g-4 text-center">
+                    <!-- Cada beneficio es una columna. 'col-lg-3' (4 por fila en pantallas grandes), 'col-md-6' (2 por fila en medianas). -->
+                    <div class="col-lg-3 col-md-6">
+                        <!-- ==== CAMBIO: Usando el componente 'Card' de Bootstrap ==== -->
+                        <!-- 'card', 'card-body' y 'h-100' para que todas las tarjetas tengan la misma altura. -->
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <img src="/images/icon/qr-code.png" alt="Icono QR" class="benefit-icon mb-3">
+                                <h3 class="h5 card-title">Acceso Instantáneo con QR</h3>
+                                <p class="card-text">Tus clientes escanean un código QR y acceden al menú al instante. Sin apps, sin complicaciones.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <img src="images/icon/design.png" alt="Icono Diseño Web" class="benefit-icon mb-3">
+                                <h3 class="h5 card-title">Diseños Atractivos</h3>
+                                <p class="card-text">Ofrecemos plantillas modernas que se adaptan a la identidad de tu marca, mejorando tu imagen.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <img src="images/icon/web_hosting.png" alt="Icono Hosting" class="benefit-icon mb-3">
+                                <h3 class="h5 card-title">Hosting Incluido</h3>
+                                <p class="card-text">Nos encargamos del alojamiento de tu menú digital para que siempre esté online y accesible.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body">
+                                <img src="images/icon/easy_update.png" alt="Icono Actualización Fácil" class="benefit-icon mb-3">
+                                <h3 class="h5 card-title">Actualizaciones Fáciles</h3>
+                                <p class="card-text">Modifica precios, platos o añade promociones de forma sencilla y en tiempo real.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Paquetes de Precios -->
+        <section id="precios" class="py-5 bg-light"> <!-- 'bg-light' para el fondo gris claro de Bootstrap -->
+            <div class="container">
+                <h2 class="text-center mb-5">Nuestros Paquetes</h2>
+                <!-- 'justify-content-center' centra las tarjetas si ocupan menos del ancho total -->
+                <div class="row justify-content-center g-4">
+                    <!-- Paquete 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <!-- ==== CAMBIO: Usando el componente 'Card' para los precios ==== -->
+                        <div class="card h-100 shadow">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h3 class="card-title">Paquete Esencial</h3>
+                                <p class="price display-5 my-4">$10 <span class="fs-6 text-muted">/mes</span></p>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="py-2">Menú digital con QR</li>
+                                    <li class="py-2">1 Plantilla estándar</li>
+                                    <li class="py-2">Hosting incluido</li>
+                                    <li class="py-2">Actualizaciones ilimitadas por el cliente</li>
+                                    <li class="py-2">Soporte básico por email</li>
+                                </ul>
+                                <a href="#contacto" class="btn btn-secondary mt-auto">¡Lo Quiero!</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paquete 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h3 class="card-title">Paquete Profesional</h3>
+                                <p class="price display-5 my-4">$15 <span class="fs-6 text-muted">/mes</span></p>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="py-2">Menú digital con QR</li>
+                                    <li class="py-2">3 Plantillas premium a elegir</li>
+                                    <li class="py-2">Personalización de colores</li>
+                                    <li class="py-2">Hosting incluido</li>
+                                    <li class="py-2">Actualizaciones ilimitadas por el cliente</li>
+                                    <li class="py-2">Soporte prioritario (Email y Chat)</li>
+                                    <li class="py-2">Estadísticas básicas de escaneos</li>
+                                </ul>
+                                <a href="#contacto" class="btn btn-secondary mt-auto">¡Lo Quiero!</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Paquete 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h3 class="card-title">Paquete Premium</h3>
+                                <p class="price display-5 my-4">$15 <span class="fs-6 text-muted">/mes</span></p>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="py-2">Menú digital con QR</li>
+                                    <li class="py-2">3 Plantillas premium a elegir</li>
+                                    <li class="py-2">Personalización de colores</li>
+                                    <li class="py-2">Hosting incluido</li>
+                                    <li class="py-2">Actualizaciones ilimitadas por el cliente</li>
+                                    <li class="py-2">Soporte prioritario (Email y Chat)</li>
+                                    <li class="py-2">Estadísticas básicas de escaneos</li>
+                                </ul>
+                                <a href="#contacto" class="btn btn-secondary mt-auto">¡Lo Quiero!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 4: Formulario de Contacto -->
+        <section id="contacto" class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-center mb-4">Contáctanos</h2>
+                        <p class="text-center text-muted mb-5">¿Tienes preguntas o estás listo para empezar? Envíanos un mensaje.</p>
+                        
+                        <!-- Formulario de Formspree (sin cambios en la lógica) -->
+                        <!-- ==== CAMBIO: Clases de formulario de Bootstrap ==== -->
+                        <form id="contact-form" action="https://formspree.io/f/TU_ENDPOINT_DE_FORMSPREE" method="POST">
+                            <!-- 'mb-3' añade un margen inferior a cada grupo de formulario -->
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre Completo:</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo Electrónico:</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Número de Teléfono (Opcional):</label>
+                                <input type="tel" id="phone" name="phone" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensaje:</label>
+                                <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                            </div>
+                            <!-- 'w-100' hace que el botón ocupe todo el ancho -->
+                            <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==== CAMBIO: Pie de Página con clases de Bootstrap ==== -->
+    <footer id="main-footer" class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <!-- 'mb-0' elimina el margen inferior del párrafo -->
+            <p class="mb-0">© <span id="current-year"></span> XMOSS Service. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ==== CAMBIO: Enlace al paquete JS de Bootstrap 5 ==== -->
+    <!-- Esto incluye Popper.js y es necesario para componentes como el menú desplegable. -->
+    <!-- Se coloca al final del body para un mejor rendimiento de carga. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- Enlace a tu archivo JavaScript personalizado (se mantiene) -->
+    <script src="js/script.js"></script>
+</body>
+</html>
