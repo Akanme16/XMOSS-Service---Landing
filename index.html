@@ -128,6 +128,57 @@ Generated html
             </div>
         </section>
 
+        <!-- ====================================================== -->
+        <!-- ==== SECCIÓN DE PLANTILLAS ==== -->
+        <!-- ====================================================== -->
+
+        <section id="plantillas" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Plantillas</h2>
+                <div class="row g-4 justify-content-center">
+                    <!-- Plantilla 1: Clásico Moderno -->
+                    <div class="col-lg-4 col-md-6">
+                        <!-- CAMBIO AQUÍ: Se añaden los atributos para abrir el modal 'modal-clasico' -->
+                        <div class="card template-card" data-bs-toggle="modal" data-bs-target="#modal-clasico">
+                            <img src="images/plantillas/plantilla-1.jpg" class="card-img-top" alt="Vista previa de la plantilla de menú 'Clásico Moderno'">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">
+                                    Clásico Moderno
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Plantilla 2: Gourmet Oscuro -->
+                    <div class="col-lg-4 col-md-6">
+                        <!-- CAMBIO AQUÍ: Se añaden los atributos para abrir el modal 'modal-gourmet' -->
+                        <div class="card template-card" data-bs-toggle="modal" data-bs-target="#modal-gourmet">
+                            <img src="images/plantillas/plantilla-2.jpg" class="card-img-top" alt="Vista previa de la plantilla de menú 'Gourmet Oscuro'">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Gourmet Oscuro</h5>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Plantilla 3: Minimalista Fresco -->
+                    <div class="col-lg-4 col-md-6">
+                        <!-- CAMBIO AQUÍ: Se añaden los atributos para abrir el modal 'modal-minimalista' -->
+                        <div class="card template-card" data-bs-toggle="modal" data-bs-target="#modal-minimalista">
+                            <img src="images/plantillas/plantilla-3.jpg" class="card-img-top" alt="Vista previa de la plantilla de menú 'Minimalista Fresco'">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Minimalista Fresco</h5>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================== -->
+        <!-- ==== FIN SECCIÓN DE PLANTILLAS ==== -->
+        <!-- ==================================================== -->
+
         <!-- Sección 3: Paquetes de Precios -->
         <section id="precios" class="py-5 bg-light">
             <div class="container">
@@ -287,6 +338,191 @@ Generated html
             </div>
         </section>
     </main>
+
+    <!-- ====================================================== -->
+    <!-- ==== INICIO DE LOS MODALES DE PLANTILLAS ==== -->
+    <!-- ====================================================== -->
+
+    <!-- Modal 1: Corresponde a la tarjeta con data-bs-target="#modal-clasico" -->
+    <div class="modal fade" id="modal-clasico" tabindex="-1" aria-labelledby="modalClasicoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalClasicoLabel">Plantillas: Clásico Moderno</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead text-center mb-4">Haz clic en cualquier plantilla para ver una demostración en vivo.</p>
+                    <!-- Usamos el sistema de rejilla de Bootstrap -->
+                    <div class="row g-4">
+                        <!-- Sub-Plantilla 1.1 -->
+                        <div class="col-12 col-sm-6 col-lg-3 mb-4"> <!-- En pantallas grandes (lg), ocupa la mitad (6 de 12 columnas)-->
+                            <!-- La etiqueta 'a' hace que toda la tarjeta sea un enlace -->
+                            <a href="#" target="_blank" class="text-decoration-none">
+                                <div class="card sub-template-card">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-1.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 1">
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title mb-0">Variación "Café Rústico"</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    
+                        <!-- Sub-Plantilla 1.2 -->
+                        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                            <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
+                                <div class="card sub-template-card">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 2">
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                            <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
+                                <div class="card sub-template-card">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 2">
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                            <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
+                                <div class="card sub-template-card">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 2">
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Puedes añadir más sub-plantillas aquí -->
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Corresponde a la tarjeta con data-bs-target="#modal-gourmet" -->
+    <div class="modal fade" id="modal-gourmet" tabindex="-1" aria-labelledby="modalGourmetLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalGourmetLabel">Plantillas: Gourmet Oscuro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead text-center mb-4">Haz clic en cualquier plantilla para ver una demostración en vivo.</p>
+                    <!-- Usamos el sistema de rejilla de Bootstrap -->
+                    <div class="row g-4">
+                        <!-- Sub-Plantilla 1.1 -->
+                        <div class="col-12 col-sm-6 col-lg-3 mb-4"> <!-- En pantallas grandes (lg), ocupa la mitad (6 de 12 columnas)-->
+                            <!-- La etiqueta 'a' hace que toda la tarjeta sea un enlace -->
+                            <a href="https://ejemplo.com/demo/clasico-moderno-1" target="_blank" class="text-decoration-none">
+                                <div class="card sub-template-card">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-1.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 1">
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title mb-0">Variación "Café Rústico"</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    
+                        <!-- Sub-Plantilla 1.2 -->
+                        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                            <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
+                                <div class="card sub-template-card">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 2">
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                            <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
+                                <div class="card sub-template-card">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 2">
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Puedes añadir más sub-plantillas aquí -->
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Corresponde a la tarjeta con data-bs-target="#modal-minimalista" -->
+    <div class="modal fade" id="modal-minimalista" tabindex="-1" aria-labelledby="modalMinimalistaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMinimalistaLabel">Plantillas: Minimalista Fresco</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead text-center mb-4">Haz clic en cualquier plantilla para ver una demostración en vivo.</p>
+                    <!-- Usamos el sistema de rejilla de Bootstrap -->
+                    <div class="row g-4">
+                        <!-- Sub-Plantilla 1.1 -->
+                        <div class="col-12 col-sm-6 col-lg-3 mb-4"> <!-- En pantallas grandes (lg), ocupa la mitad (6 de 12 columnas)-->
+                            <!-- La etiqueta 'a' hace que toda la tarjeta sea un enlace -->
+                            <a href="https://ejemplo.com/demo/clasico-moderno-1" target="_blank" class="text-decoration-none">
+                                <div class="card sub-template-card">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-1.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 1">
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title mb-0">Variación "Café Rústico"</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    
+                        <!-- Sub-Plantilla 1.2 -->
+                        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                            <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
+                                <div class="card sub-template-card">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 2">
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                            <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
+                                <div class="card sub-template-card">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 2">
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Puedes añadir más sub-plantillas aquí -->
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================================================== -->
+    <!-- ==== FIN DE LOS MODALES DE PLANTILLAS ==== -->
+    <!-- ==================================================== -->
+
 
     <!-- ==== CAMBIO: Pie de Página con clases de Bootstrap ==== -->
     <footer id="main-footer" class="bg-dark text-white text-center py-4">
