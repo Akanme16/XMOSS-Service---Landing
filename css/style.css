@@ -10,12 +10,9 @@
 }
 
 /* --- Estilos Globales y de Tipografía --- */
-
-/* ==== NUEVO: Solución para el navbar fijo ==== */
 html {
-    scroll-padding-top: 70px; /* Deja espacio para el navbar fijo al navegar a un ancla */
+    scroll-padding-top: 70px;
 }
-
 body {
     font-family: montserrat, sans-serif;
     color: var(--text-color-dark);
@@ -84,7 +81,6 @@ h2::after {
     top: 50%; 
     margin-top: -1px; 
 }
-
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     background-image: none;
 }
@@ -96,7 +92,6 @@ h2::after {
     transform: rotate(-45deg);
     opacity: 1;
 }
-
 @media (max-width: 991.98px) {
     .navbar-nav {
         text-align: center;
@@ -111,12 +106,10 @@ h2::after {
     font-weight: bold;
     border-radius: 25px;
 }
-
 .btn-primary:hover { 
     background-color: var(--primary-color-darker);
     border-color: var(--primary-color-darker);
     color: var(--secondary-color); 
-
 }
 .btn-secondary { 
     background-color: var(--secondary-color); 
@@ -125,7 +118,6 @@ h2::after {
     font-weight: bold;
     border-radius: 30px; 
 }
-
 .btn-secondary:hover {
     background-color: var(--primary-color); 
     color: var(--secondary-color); 
@@ -162,17 +154,26 @@ h2::after {
 }
 
 #beneficios .card-title { 
-    color: var(--primary-color); 
+    color: var(--primary-color);
+}
+
+/* --- SECCIÓN DE PRECIOS --- */
+
+#precios .card-title {
+    margin-top: 20px;
+    font-size: 1.6rem; /* Ajusta este valor a tu gusto */
+    font-weight: 700;  /* Un poco más de grosor */
 }
 
 #precios { 
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
 }
+
 
 #precios .card { 
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
     border: 0;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 #precios .card:hover { 
@@ -180,58 +181,90 @@ h2::after {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; 
 }
 
-#precios .price { 
-    font-weight: bold; 
-    color: var(--primary-color); 
+.package-description{ /*Estilos parrafos */
+    font-size: 0.9rem; /* Un poco más pequeño para que no compita con el título */
+    font-style: italic; /* Un estilo en cursiva para diferenciarlo */
+    padding: 0 15px 0 15px;
+    margin-bottom: 0 !important;
+}
+
+.list-unstyled {
+    text-align: left;
+    padding: 0 20px 0 20px; 
+}
+
+/* ==== Estilos para los precios dinámicos ==== */
+#precios .price-amount {
+    font-weight: bold;
+    color: var(--primary-color); /* Color dorado para el monto */
+}
+#precios .price-duration {
+    font-weight: bold;
+    color: var(--text-color-dark); /* Color negro para el texto "/mes", etc. */
 }
 
 #precios .card ul li { 
     border-bottom: 1px dotted #ccc; 
 }
-
 #precios .card ul li:last-child { 
     border-bottom: none; 
 }
 
+/* ==== CAMBIO AQUÍ: Estilo para la nueva línea de precio extra ==== */
+.extra-update-price {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #6c757d; /* Un gris sutil */
+    border-top: 1px dotted #ccc;
+    padding-top: 15px;
+}
+
+/* Estilos para el selector de precios */
+#pricing-toggle .nav-link {
+    color: var(--text-color-dark);
+    font-weight: bold;
+    background-color: #e2e6ea;
+    margin: 0 5px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+#pricing-toggle .nav-link.active {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+#pricing-toggle .nav-link:not(.active):hover {
+    background-color: #d4d8db;
+}
+
+/* --- SECCIÓN DE CONTACTO Y FOOTER --- */
 .form-control:focus { 
     border-color: var(--primary-color); 
     box-shadow: 0 0 0 0.25rem rgba(197, 149, 39, 0.25); 
 }
-
-#main-footer { padding-top: 2rem; 
+#main-footer { 
+    padding-top: 2rem; 
     padding-bottom: 2rem;
 }
 
-/* --- Media Queries Mínimas --- */
-@media (max-width: 768px) { h1.display-4 { font-size: 2.8rem; } }
-@media (max-width: 480px) { h2 { font-size: 1.8rem; } }
-
+/* --- Media Queries para Responsividad --- */
 /* Breakpoint para tablets y dispositivos más pequeños */
 @media (max-width: 768px) { 
-    /* Hacemos el título del Hero más pequeño en móviles */
     .hero-section h1 {
-        font-size: 1rem;  /* Era 3.5rem (display-4), lo bajamos */
-        font-weight: 900; /* Puedes ajustar el grosor si quieres */
+        font-size: 2.5rem;
     }
-
-    /* Hacemos el párrafo del Hero un poco más pequeño */
     .hero-section p {
-        font-size: 1rem; /* Era 1.25rem (lead), lo bajamos un poco */
-        font-weight: 500; /* Puedes ajustar el grosor si quieres */
+        font-size: 1.1rem;
     }
-
-    /* Hacemos los títulos de sección un poco más pequeños */
     h2 {
         font-size: 2rem;
     }
 }
-
 /* Breakpoint para teléfonos pequeños */
 @media (max-width: 480px) {
     .hero-section h1 {
-        font-size: 2.2rem; /* Aún más pequeño para pantallas muy chicas */
+        font-size: 2.2rem;
     }
-
     h2 {
         font-size: 1.8rem;
     }

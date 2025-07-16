@@ -129,65 +129,120 @@ Generated html
         </section>
 
         <!-- Sección 3: Paquetes de Precios -->
-        <section id="precios" class="py-5 bg-light"> <!-- 'bg-light' para el fondo gris claro de Bootstrap -->
+        <section id="precios" class="py-5 bg-light">
             <div class="container">
-                <h2 class="text-center mb-5">Nuestros Paquetes</h2>
-                <!-- 'justify-content-center' centra las tarjetas si ocupan menos del ancho total -->
+                <h2 class="text-center mb-4">Nuestros Paquetes</h2>
+            
+                <!-- ==== NUEVO: Selector de Duración ==== -->
+                <ul class="nav nav-pills justify-content-center mb-5" id="pricing-toggle">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-duration="1">1 Mes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-duration="3">3 Meses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-duration="6">6 Meses</a>
+                    </li>
+                </ul>
+            
                 <div class="row justify-content-center g-4">
-                    <!-- Paquete 1 -->
+                    <!-- Paquete Esencial -->
                     <div class="col-lg-4 col-md-6">
-                        <!-- ==== CAMBIO: Usando el componente 'Card' para los precios ==== -->
                         <div class="card h-100 shadow">
                             <div class="card-body text-center d-flex flex-column">
                                 <h3 class="card-title">Paquete Esencial</h3>
-                                <p class="price display-5 my-4">$10 <span class="fs-6 text-muted">/mes</span></p>
+                                <p class="package-description text-muted mb-4">Ideal para negocios que inician su presencia digital.</p>
+                                <!-- ==== CAMBIO: Estructura de precio dinámica ==== -->
+                                <div class="price-container my-4">
+                                    <span class="price-amount display-5" data-plan-price="basico">
+                                        $30
+                                    </span>
+                                    <span class="price-duration fs-6 text-muted" data-plan-duration="basico">
+                                        USD
+                                    </span>
+                                </div>
                                 <ul class="list-unstyled mb-4">
-                                    <li class="py-2">Menú digital con QR</li>
-                                    <li class="py-2">1 Plantilla estándar</li>
-                                    <li class="py-2">Hosting incluido</li>
-                                    <li class="py-2">Actualizaciones ilimitadas por el cliente</li>
-                                    <li class="py-2">Soporte básico por email</li>
+                                    <li class="py-2">Adaptación de plantilla a tu marca (colores, imágenes, textos)</li>
+                                    <li class="py-2">2 actualizaciones mensuales del menú.</li>
+                                    <li class="py-2">1 diseño de publicación + historia para redes sociales.</li>
+                                    <li class="py-2">Diseño de QR personalizado.</li>
+                                    <li class="py-2">Hosting incluido.</li>
                                 </ul>
+                                <!-- ==== Adicionales ==== -->
+                                <p class="extra-update-price">
+                                    Actualizaciones adicionales $
+                                    <span data-plan-extra-update-price="basico">
+                                        5
+                                    </span>
+                                    USD C/U
+                                </p>
                                 <a href="#contacto" class="btn btn-secondary mt-auto">¡Lo Quiero!</a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Paquete 2 -->
+                
+                    <!-- Paquete Profesional -->
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow">
                             <div class="card-body text-center d-flex flex-column">
                                 <h3 class="card-title">Paquete Profesional</h3>
-                                <p class="price display-5 my-4">$15 <span class="fs-6 text-muted">/mes</span></p>
+                                <p class="package-description text-muted mb-4">Para negocios que desean una presencia digital más sólida.</p>
+                                <!-- ==== CAMBIO: Estructura de precio dinámica ==== -->
+                                <div class="price-container my-4">
+                                    <span class="price-amount display-5" data-plan-price="profesional">
+                                        $50
+                                    </span>
+                                    <span class="price-duration fs-6 text-muted" data-plan-duration="profesional">
+                                        USD
+                                    </span>
+                                </div>
                                 <ul class="list-unstyled mb-4">
-                                    <li class="py-2">Menú digital con QR</li>
-                                    <li class="py-2">3 Plantillas premium a elegir</li>
-                                    <li class="py-2">Personalización de colores</li>
-                                    <li class="py-2">Hosting incluido</li>
-                                    <li class="py-2">Actualizaciones ilimitadas por el cliente</li>
-                                    <li class="py-2">Soporte prioritario (Email y Chat)</li>
-                                    <li class="py-2">Estadísticas básicas de escaneos</li>
+                                    <li class="py-2">Adaptación de plantilla a tu marca (colores, imágenes, textos)</li>
+                                    <li class="py-2">8 actualizaciones mensuales del menú.</li>
+                                    <li class="py-2">3 diseños de publicación + historia para redes sociales.</li>
+                                    <li class="py-2">Diseño de QR personalizado.</li>
+                                    <li class="py-2">Hosting incluido.</li>
                                 </ul>
+                                <!-- ==== Adicionales ==== -->
+                                <p class="extra-update-price">
+                                    Actualizaciones adicionales $
+                                    <span data-plan-extra-update-price="profesional">
+                                        4
+                                    </span>
+                                    USD C/U
+                                </p>
                                 <a href="#contacto" class="btn btn-secondary mt-auto">¡Lo Quiero!</a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Paquete 2 -->
+                    <!-- Paquete Premium -->
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 shadow">
                             <div class="card-body text-center d-flex flex-column">
                                 <h3 class="card-title">Paquete Premium</h3>
-                                <p class="price display-5 my-4">$15 <span class="fs-6 text-muted">/mes</span></p>
+                                <p class="package-description text-muted mb-4">Recomendado para marcas que buscan destacar en el entorno digital.</p>
+                                <!-- ==== CAMBIO: Estructura de precio dinámica ==== -->
+                                <div class="price-container my-4">
+                                    <span class="price-amount display-5" data-plan-price="premium">$75</span>
+                                    <span class="price-duration fs-6 text-muted" data-plan-duration="premium">USD</span>
+                                </div>
                                 <ul class="list-unstyled mb-4">
-                                    <li class="py-2">Menú digital con QR</li>
-                                    <li class="py-2">3 Plantillas premium a elegir</li>
-                                    <li class="py-2">Personalización de colores</li>
-                                    <li class="py-2">Hosting incluido</li>
-                                    <li class="py-2">Actualizaciones ilimitadas por el cliente</li>
-                                    <li class="py-2">Soporte prioritario (Email y Chat)</li>
-                                    <li class="py-2">Estadísticas básicas de escaneos</li>
+                                    <li class="py-2">Adaptación de plantilla a tu marca (colores, imágenes, textos)</li>
+                                    <li class="py-2">16 actualizaciones mensuales del menú.</li>
+                                    <li class="py-2">4 diseños de publicación + historia para redes sociales.</li>
+                                    <li class="py-2">Diseño de QR personalizado.</li>
+                                    <li class="py-2">Hosting incluido.</li>
                                 </ul>
+                                <!-- ==== Adicionales ==== -->
+                                <p class="extra-update-price">
+                                    Actualizaciones adicionales $
+                                    <span data-plan-extra-update-price="premium">
+                                        3
+                                    </span>
+                                    USD C/U
+                                </p>
                                 <a href="#contacto" class="btn btn-secondary mt-auto">¡Lo Quiero!</a>
                             </div>
                         </div>

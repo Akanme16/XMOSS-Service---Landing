@@ -39,6 +39,71 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // ====  Lógica para precios dinámicos ====
+    const pricingToggle = document.getElementById('pricing-toggle');
+    if (pricingToggle) {
+        // 1. Definir todos los precios en objetos
+        const pricingData = {
+            '1': { basico: '30', profesional: '50', premium: '75' },
+            '3': { basico: '25', profesional: '40', premium: '60' },
+            '6': { basico: '20', profesional: '35', premium: '50' }
+        };
+        const durationTextData = {
+            '1': 'USD',
+            '3': 'USD',
+            '6': 'USD'
+        };
+        // ==== CAMBIO AQUÍ: Nuevo objeto para precios de actualizaciones extra ====
+        const extraUpdatePricingData = {
+            '1': { basico: '5', profesional: '4', premium: '3' },
+            '3': { basico: '4', profesional: '3', premium: '2' },
+            '6': { basico: '3', profesional: '2', premium: '1' }
+        };
+
+        // 2. Seleccionar todos los elementos del DOM que se van a actualizar
+        const priceAmountElements = document.querySelectorAll('.price-amount');
+        const priceDurationElements = document.querySelectorAll('.price-duration');
+        const toggleLinks = pricingToggle.querySelectorAll('.nav-link');
+        // ==== CAMBIO AQUÍ: Seleccionar los nuevos spans de precio ====
+        const extraUpdatePriceElements = document.querySelectorAll('[data-plan-extra-update-price]');
+
+        // 3. Función para actualizar todos los precios
+        function updatePrices(duration) {
+            const pricesForDuration = pricingData[duration];
+            const textForDuration = durationTextData[duration];
+            const extraPricesForDuration = extraUpdatePricingData[duration];
+            
+            // Actualizar precios principales
+            priceAmountElements.forEach(el => {
+                const plan = el.getAttribute('data-plan-price');
+                el.textContent = `$${pricesForDuration[plan]}`;
+            });
+
+            // Actualizar texto de duración
+            priceDurationElements.forEach(el => {
+                el.textContent = textForDuration;
+            });
+
+            // ==== CAMBIO AQUÍ: Actualizar precios de actualizaciones extra ====
+            extraUpdatePriceElements.forEach(el => {
+                const plan = el.getAttribute('data-plan-extra-update-price');
+                el.textContent = extraPricesForDuration[plan];
+            });
+        }
+
+        // 4. Añadir evento de clic
+        toggleLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                const selectedDuration = this.getAttribute('data-duration');
+                updatePrices(selectedDuration);
+            });
+        });
+    }
+
+
 
     // --- CONSERVADO: Actualizar año en el Footer ---
     const currentYearSpan = document.getElementById('current-year');
