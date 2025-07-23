@@ -103,23 +103,69 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // --- Lógica para el Formulario de Contacto con AJAX ---
+    const contactForm = document.getElementById('contact-form');
+    const submitButton = document.getElementById('submit-button');
+    const formStatus = document.getElementById('form-status');
 
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío tradicional del formulario
 
-    // --- CONSERVADO: Actualizar año en el Footer ---
+            const originalButtonText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando...';
+            formStatus.innerHTML = ''; // Limpiar mensajes anteriores
+
+            // Recopilar datos del formulario
+            const formData = new FormData(contactForm);
+
+            // Enviar los datos al script PHP
+            fetch('php/send_email.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    formStatus.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
+                    contactForm.reset(); // Limpiar el formulario
+                } else {
+                    formStatus.innerHTML = `<div class="alert alert-danger">${data.message}</div>`;
+                }
+            })
+            .catch(error => {
+                // Capturar errores de red o si el JSON es inválido
+                console.error('Error:', error);
+                formStatus.innerHTML = `<div class="alert alert-danger">Ocurrió un error inesperado. Por favor, intenta de nuevo.</div>`;
+            })
+            .finally(() => {
+                // Esto se ejecuta siempre, al final
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            });
+        });
+    }
+
+    // --- NUEVO: Inicializar el selector de país para el teléfono ---
+    const phoneInputField = document.querySelector("#phone");
+    if (phoneInputField) {
+        window.intlTelInput(phoneInputField, {
+            /*initialCountry: "auto",
+            geoIpLookup: function(callback) {
+                fetch("https://ipapi.co/json")
+                    .then(res => res.json())
+                    .then(data => callback(data.country_code))
+                    .catch(() => callback("us"));
+            },*/
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js",
+        });
+    }
+
+    // --- Actualizar año en el Footer ---
     const currentYearSpan = document.getElementById('current-year');
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
-    }
-
-
-    // --- MANTENIDO COMO REFERENCIA: Formulario de Contacto ---
-    // Este código sigue siendo válido si quieres añadir validaciones JS personalizadas en el futuro.
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
-            // Actualmente, el envío lo gestiona Formspree a través del action del formulario.
-            // Aquí se podría añadir lógica extra si fuera necesario.
-        });
     }
 
 }); // Fin de DOMContentLoaded

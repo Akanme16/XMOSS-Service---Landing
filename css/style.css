@@ -124,6 +124,18 @@ h2::after {
     border: 2px solid var(--primary-color); 
 }
 
+.btn-primary:active {
+    background-color: var(--text-color-dark) !important;
+    border-color: var(--text-color-dark) !important;
+    color: var(--text-color-light) !important;
+}
+
+.btn-secondary:active {
+    background-color: var(--text-color-dark) !important;
+    border-color: var(--text-color-dark) !important;
+    color: var(--text-color-light) !important;
+}
+
 /* --- Estilos Específicos de Sección --- */
 .hero-section { 
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/hero-background.webp') no-repeat center center/cover;
@@ -145,11 +157,11 @@ h2::after {
 }
 
 .benefit-icon { 
-    width: 60px; 
-    height: 60px; 
-    margin-left: auto; 
-    margin-right: auto; 
-    border-radius: 50%; 
+    width: 40px; 
+    height: 40px; 
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
     object-fit: cover; 
 }
 
@@ -163,93 +175,38 @@ h2::after {
     background-color: var(--background-light); /* Fondo blanco para separar secciones */
 }
 
-#plantillas .card-body{
-    background-color: var(--navbar-bg-color);
-}
-
-#plantillas .card-title { 
-    color: var(--text-color-light);
-}
-
-.template-card {
+/* Estilos unificados para las tarjetas de fuera y las de dentro del modal */
+.template-card, .sub-template-card {
     border-radius: 15px;
     border: 0;
     overflow: hidden; /* Asegura que la imagen respete los bordes redondeados */
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
     cursor: pointer;
+    text-decoration: none; /* Elimina el subrayado si la sub-card es un enlace */
 }
 
-.template-card:hover {
+.template-card:hover, .sub-template-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
-.template-card .card-img-top {
+/* Se aplica el aspect-ratio a la imagen, que es lo correcto */
+.template-card .card-img-top, .sub-template-card .card-img-top {
     aspect-ratio: 1 / 1; /* Proporción para que las imágenes se vean uniformes */
     object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
 }
 
-.template-card .card-title {
-    color: var(--text-color-dark);
+/* Estilos para el contenedor del título (el trozo negro) */
+.template-card .card-body, .sub-template-card .card-body {
+    background-color: var(--navbar-bg-color);
+    text-align: center;
+}
+
+/* Estilos para el texto del título */
+.template-card .card-title, .sub-template-card .card-title {
+    color: var(--text-color-light); /* Título blanco en ambos casos */
     font-weight: 600;
-}
-
-/*sub-cards modal*/
-
-.sub-template-card {
-    width: 100%; /* se ajusta al contenedor col */
-    aspect-ratio: 1 / 1;
-    border-radius: 15px;
-    overflow: hidden;
-    border: 1px solid #ddd;
-    transition: all var(--transition-speed) ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.sub-template-card .card-title {
-    color: var(--text-color-dark);
-    font-weight: 600;
-}
-
-.sub-template-card:hover {
-    transform: scale(1.03); /* Un sutil efecto de zoom */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Una sombra más pronunciada */
-    border-color: var(--primary-color);
-}
-
-/*--- SECCIÓN DE PLANTILLAS MODAL --- */
-
-/*modal clasico*/
-
-#modal-clasico .card-body{
-    background-color: var(--navbar-bg-color);
-}
-
-#modal-clasico .card-title { 
-    color: var(--text-color-light);
-}
-
-/*modal gourmet*/
-
-#modal-gourmet .card-body{
-    background-color: var(--navbar-bg-color);
-}
-
-#modal-gourmet .card-title { 
-    color: var(--text-color-light);
-}
-
-/*modal minimalistat*/ 
-
-#modal-minimalista .card-body{
-    background-color: var(--navbar-bg-color);
-}
-
-#modal-minimalista .card-title { 
-    color: var(--text-color-light);
 }
 
 /* --- SECCIÓN DE PRECIOS --- */
@@ -367,4 +324,9 @@ h2::after {
     h2 {
         font-size: 1.8rem;
     }
+}
+
+.iti {
+    display: block;
+    width: 100%;
 }

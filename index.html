@@ -1,8 +1,6 @@
-Generated html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Metadatos básicos (sin cambios) -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="XMOSS Service ofrece plantillas de menú digital innovadoras con códigos QR y hosting. Moderniza tu restaurante con nosotros.">
@@ -16,24 +14,21 @@ Generated html
 
     <title>XMOSS Service</title>
 
-    <!-- ==== CAMBIO: Enlace a la hoja de estilos de Bootstrap 5 ==== -->
-    <!-- Se añade el CDN de Bootstrap. Se coloca ANTES de tu CSS personalizado para que puedas sobrescribir sus estilos. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
-    <!-- Enlace a tu hoja de estilos CSS personalizada (se mantiene) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Enlace a tu hoja de estilos CSS intLtelInput -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css"/>
+
+    <!-- Enlace estilos CSS personalizados-->
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
-    <!-- ==== CAMBIO: Barra de Navegación con Bootstrap 5 ==== -->
-    <!-- Se reemplaza tu header personalizado por el componente 'navbar' de Bootstrap. -->
-    <!-- 'navbar-expand-lg': el menú se colapsará en pantallas más pequeñas que 'large' (992px). -->
-    <!-- 'navbar-dark bg-dark': estilo de texto claro sobre fondo oscuro. -->
-    <!-- 'fixed-top': mantiene la barra fija en la parte superior. -->
     <header id="main-header">
         <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
@@ -42,7 +37,7 @@ Generated html
                     <img src="images/logo.png" alt="Logo XMOSS Service" style="height: 50px;">
                 </a>
 
-                <!-- Botón Hamburguesa de Bootstrap (se activa en pantallas pequeñas) -->
+                <!-- Botón Hamburguesa -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -52,6 +47,7 @@ Generated html
                     <ul class="navbar-nav ms-auto"> <!-- 'ms-auto' alinea los enlaces a la derecha -->
                         <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#plantillas">Plantillas</a></li>
                         <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                     </ul>
@@ -61,17 +57,11 @@ Generated html
     </header>
 
     <main>
-        <!-- Sección 1: Introducción (Hero) -->
-        <!-- ==== CAMBIO: Estructura con clases de Flexbox de Bootstrap ==== -->
-        <!-- 'd-flex', 'align-items-center' para centrar verticalmente el contenido. -->
-        <!-- 'text-white' para el color del texto. -->
+
         <section id="inicio" class="hero-section d-flex align-items-center text-white">
             <div class="container text-center">
-                <!-- 'display-*' es una clase de Bootstrap para títulos grandes y destacados. -->
                 <h1 class="display-4 fw-bold">Transforma la Experiencia de tus Clientes con Menús Digitales</h1>
-                <p class="lead">En XMOSS Service, creamos menús digitales elegantes y funcionales con códigos QR, incluyendo hosting. ¡Moderniza tu restaurante hoy mismo!</p>
-                <!-- ==== CAMBIO: Clases de Botón de Bootstrap ==== -->
-                <!-- Se usan las clases 'btn' y 'btn-lg' de Bootstrap. El color 'btn-primary' lo definiremos en nuestro CSS. -->
+                <p class="lead">¿Si todos se parecen… qué te hace único? XMOSS SERVICE, marcá la diferencia.</p>
                 <a href="#precios" class="btn btn-primary btn-lg">
                     Ver Paquetes
                 </a>
@@ -79,19 +69,15 @@ Generated html
         </section>
 
         <!-- Sección 2: Beneficios -->
-        <!-- ==== CAMBIO: Usando la Grid de Bootstrap en lugar de .benefits-grid ==== -->
-        <section id="beneficios" class="py-5"> <!-- 'py-5' añade padding vertical de Bootstrap -->
+        <section id="beneficios" class="py-5">
             <div class="container">
                 <h2 class="text-center mb-5">¿Por qué Elegir XMOSS Service?</h2>
-                <!-- 'row' es el contenedor de la grilla. 'g-4' añade un espaciado (gap) entre las columnas. -->
+
                 <div class="row g-4 text-center">
-                    <!-- Cada beneficio es una columna. 'col-lg-3' (4 por fila en pantallas grandes), 'col-md-6' (2 por fila en medianas). -->
                     <div class="col-lg-3 col-md-6">
-                        <!-- ==== CAMBIO: Usando el componente 'Card' de Bootstrap ==== -->
-                        <!-- 'card', 'card-body' y 'h-100' para que todas las tarjetas tengan la misma altura. -->
                         <div class="card h-100 shadow-sm border-0">
                             <div class="card-body">
-                                <img src="/images/icon/qr-code.png" alt="Icono QR" class="benefit-icon mb-3">
+                                <img src="images/icon/qr-code-scan.svg" alt="Icono QR" class="benefit-icon mb-3">
                                 <h3 class="h5 card-title">Acceso Instantáneo con QR</h3>
                                 <p class="card-text">Tus clientes escanean un código QR y acceden al menú al instante. Sin apps, sin complicaciones.</p>
                             </div>
@@ -100,7 +86,7 @@ Generated html
                     <div class="col-lg-3 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="card-body">
-                                <img src="images/icon/design.png" alt="Icono Diseño Web" class="benefit-icon mb-3">
+                                <img src="images/icon/vector-pen.svg" alt="Icono Diseño Web" class="benefit-icon mb-3">
                                 <h3 class="h5 card-title">Diseños Atractivos</h3>
                                 <p class="card-text">Ofrecemos plantillas modernas que se adaptan a la identidad de tu marca, mejorando tu imagen.</p>
                             </div>
@@ -109,7 +95,7 @@ Generated html
                     <div class="col-lg-3 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="card-body">
-                                <img src="images/icon/web_hosting.png" alt="Icono Hosting" class="benefit-icon mb-3">
+                                <img src="images/icon/hdd-stack.svg" alt="Icono Hosting" class="benefit-icon mb-3">
                                 <h3 class="h5 card-title">Hosting Incluido</h3>
                                 <p class="card-text">Nos encargamos del alojamiento de tu menú digital para que siempre esté online y accesible.</p>
                             </div>
@@ -118,9 +104,9 @@ Generated html
                     <div class="col-lg-3 col-md-6">
                         <div class="card h-100 shadow-sm border-0">
                             <div class="card-body">
-                                <img src="images/icon/easy_update.png" alt="Icono Actualización Fácil" class="benefit-icon mb-3">
-                                <h3 class="h5 card-title">Actualizaciones Fáciles</h3>
-                                <p class="card-text">Modifica precios, platos o añade promociones de forma sencilla y en tiempo real.</p>
+                                <img src="images/icon/pencil-square.svg" alt="Icono Actualización Fácil" class="benefit-icon mb-3">
+                                <h3 class="h5 card-title">Actualizaciones</h3>
+                                <p class="card-text">Hacemos la modificación de precios, platos o integración de promociones por tí.</p>
                             </div>
                         </div>
                     </div>
@@ -136,37 +122,34 @@ Generated html
             <div class="container">
                 <h2 class="text-center mb-5">Plantillas</h2>
                 <div class="row g-4 justify-content-center">
-                    <!-- Plantilla 1: Clásico Moderno -->
+                    <!-- Plantilla 1: RESTAURANTE -->
                     <div class="col-lg-4 col-md-6">
-                        <!-- CAMBIO AQUÍ: Se añaden los atributos para abrir el modal 'modal-clasico' -->
-                        <div class="card template-card" data-bs-toggle="modal" data-bs-target="#modal-clasico">
-                            <img src="images/plantillas/plantilla-1.jpg" class="card-img-top" alt="Vista previa de la plantilla de menú 'Clásico Moderno'">
+                        <div class="card template-card" data-bs-toggle="modal" data-bs-target="#modal-restaurante">
+                            <img src="images/plantillas/restaurantes.webp" class="card-img-top" alt="Vista previa de la plantilla de 'Restaurantes'">
                             <div class="card-body text-center">
                                 <h5 class="card-title">
-                                    Clásico Moderno
+                                    Restaurante
                                 </h5>
                             </div>
                         </div>
                     </div>
                 
-                    <!-- Plantilla 2: Gourmet Oscuro -->
+                    <!-- Plantilla 2: PASTELERÍA -->
                     <div class="col-lg-4 col-md-6">
-                        <!-- CAMBIO AQUÍ: Se añaden los atributos para abrir el modal 'modal-gourmet' -->
-                        <div class="card template-card" data-bs-toggle="modal" data-bs-target="#modal-gourmet">
-                            <img src="images/plantillas/plantilla-2.jpg" class="card-img-top" alt="Vista previa de la plantilla de menú 'Gourmet Oscuro'">
+                        <div class="card template-card" data-bs-toggle="modal" data-bs-target="#modal-pasteleria">
+                            <img src="images/plantillas/pastelerias.webp" class="card-img-top" alt="Vista previa de la plantilla de 'Pastelerías'">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Gourmet Oscuro</h5>
+                                <h5 class="card-title">Pastelería</h5>
                             </div>
                         </div>
                     </div>
                 
-                    <!-- Plantilla 3: Minimalista Fresco -->
+                    <!-- Plantilla 3: COMIDA RÁPIDA -->
                     <div class="col-lg-4 col-md-6">
-                        <!-- CAMBIO AQUÍ: Se añaden los atributos para abrir el modal 'modal-minimalista' -->
-                        <div class="card template-card" data-bs-toggle="modal" data-bs-target="#modal-minimalista">
-                            <img src="images/plantillas/plantilla-3.jpg" class="card-img-top" alt="Vista previa de la plantilla de menú 'Minimalista Fresco'">
+                        <div class="card template-card" data-bs-toggle="modal" data-bs-target="#modal-comida-rapida">
+                            <img src="images/plantillas/comida-rapida.webp" class="card-img-top" alt="Vista previa de la plantilla de 'Comida Rápida'">
                             <div class="card-body text-center">
-                                <h5 class="card-title">Minimalista Fresco</h5>
+                                <h5 class="card-title">Comida Rápida</h5>
                             </div>
                         </div>
                     </div>
@@ -184,7 +167,7 @@ Generated html
             <div class="container">
                 <h2 class="text-center mb-4">Nuestros Paquetes</h2>
             
-                <!-- ==== NUEVO: Selector de Duración ==== -->
+                <!-- ==== Selector de Duración ==== -->
                 <ul class="nav nav-pills justify-content-center mb-5" id="pricing-toggle">
                     <li class="nav-item">
                         <a class="nav-link active" href="#" data-duration="1">1 Mes</a>
@@ -239,7 +222,7 @@ Generated html
                             <div class="card-body text-center d-flex flex-column">
                                 <h3 class="card-title">Paquete Profesional</h3>
                                 <p class="package-description text-muted mb-4">Para negocios que desean una presencia digital más sólida.</p>
-                                <!-- ==== CAMBIO: Estructura de precio dinámica ==== -->
+                                <!-- ==== Estructura de precio dinámica ==== -->
                                 <div class="price-container my-4">
                                     <span class="price-amount display-5" data-plan-price="profesional">
                                         $50
@@ -274,7 +257,7 @@ Generated html
                             <div class="card-body text-center d-flex flex-column">
                                 <h3 class="card-title">Paquete Premium</h3>
                                 <p class="package-description text-muted mb-4">Recomendado para marcas que buscan destacar en el entorno digital.</p>
-                                <!-- ==== CAMBIO: Estructura de precio dinámica ==== -->
+                                <!-- ==== Estructura de precio dinámica ==== -->
                                 <div class="price-container my-4">
                                     <span class="price-amount display-5" data-plan-price="premium">$75</span>
                                     <span class="price-duration fs-6 text-muted" data-plan-duration="premium">USD</span>
@@ -310,28 +293,61 @@ Generated html
                         <h2 class="text-center mb-4">Contáctanos</h2>
                         <p class="text-center text-muted mb-5">¿Tienes preguntas o estás listo para empezar? Envíanos un mensaje.</p>
                         
-                        <!-- Formulario de Formspree (sin cambios en la lógica) -->
-                        <!-- ==== CAMBIO: Clases de formulario de Bootstrap ==== -->
-                        <form id="contact-form" action="https://formspree.io/f/TU_ENDPOINT_DE_FORMSPREE" method="POST">
-                            <!-- 'mb-3' añade un margen inferior a cada grupo de formulario -->
+                        <!-- Formulario que será manejado por JavaScript -->
+                        <form id="contact-form">
+
+                            <!-- Nombre Completo -->
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nombre Completo:</label>
                                 <input type="text" id="name" name="name" class="form-control" required>
                             </div>
+                        
+                            <!-- Correo Electrónico -->
                             <div class="mb-3">
                                 <label for="email" class="form-label">Correo Electrónico:</label>
                                 <input type="email" id="email" name="email" class="form-control" required>
                             </div>
+                        
+                            <!-- Número de Teléfono con Prefijo -->
                             <div class="mb-3">
-                                <label for="phone" class="form-label">Número de Teléfono (Opcional):</label>
-                                <input type="tel" id="phone" name="phone" class="form-control">
+                                <label for="phone" class="form-label">Número de Teléfono:</label>
+                                <input id="phone" name="phone" type="text" class="form-control" required>
                             </div>
+                        
+                            <!-- Dropdown para Paquetes -->
                             <div class="mb-3">
-                                <label for="message" class="form-label">Mensaje:</label>
-                                <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                                <label for="paquete" class="form-label">Paquete de Interés:</label>
+                                <select class="form-control" id="paquete" name="paquete" required>
+                                    <option value="" disabled selected>Selecciona un paquete...</option>
+                                    <option value="Esencial">Paquete Esencial</option>
+                                    <option value="Profesional">Paquete Profesional</option>
+                                    <option value="Premium">Paquete Premium</option>
+                                </select>
                             </div>
-                            <!-- 'w-100' hace que el botón ocupe todo el ancho -->
-                            <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+                        
+                            <!-- Dropdown para Plazos -->
+                            <div class="mb-3">
+                                <label for="plazo" class="form-label">Plazo del Contrato:</label>
+                                <select class="form-control" id="plazo" name="plazo" required>
+                                    <option value="" disabled selected>Selecciona un plazo...</option>
+                                    <option value="1 Mes">1 Mes</option>
+                                    <option value="3 Meses">3 Meses</option>
+                                    <option value="6 Meses">6 Meses</option>
+                                </select>
+                            </div>
+                        
+                            <!-- Mensaje -->
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensaje (Opcional):</label>
+                                <textarea id="message" name="message" rows="4" class="form-control"></textarea>
+                            </div>
+                        
+                            <!-- Botón de Envío -->
+                            <button type="submit" id="submit-button" class="btn btn-primary w-100">Enviar Solicitud</button>
+                        
+                            <!-- Contenedor para mensajes de estado (éxito/error) -->
+                            <div id="form-status" class="mt-3 text-center"></div>
+                        
                         </form>
                     </div>
                 </div>
@@ -343,26 +359,24 @@ Generated html
     <!-- ==== INICIO DE LOS MODALES DE PLANTILLAS ==== -->
     <!-- ====================================================== -->
 
-    <!-- Modal 1: Corresponde a la tarjeta con data-bs-target="#modal-clasico" -->
-    <div class="modal fade" id="modal-clasico" tabindex="-1" aria-labelledby="modalClasicoLabel" aria-hidden="true">
+    <!-- Modal 1: Corresponde a la tarjeta con data-bs-target="#modal-restaurante" -->
+    <div class="modal fade" id="modal-restaurante" tabindex="-1" aria-labelledby="modalRestauranteLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalClasicoLabel">Plantillas: Clásico Moderno</h5>
+                    <h5 class="modal-title" id="modalRestauranteLabel">Plantillas: Restaurantes</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p class="lead text-center mb-4">Haz clic en cualquier plantilla para ver una demostración en vivo.</p>
-                    <!-- Usamos el sistema de rejilla de Bootstrap -->
                     <div class="row g-4">
                         <!-- Sub-Plantilla 1.1 -->
-                        <div class="col-12 col-sm-6 col-lg-3 mb-4"> <!-- En pantallas grandes (lg), ocupa la mitad (6 de 12 columnas)-->
-                            <!-- La etiqueta 'a' hace que toda la tarjeta sea un enlace -->
+                        <div class="col-12 col-sm-6 col-lg-3 mb-4">
                             <a href="#" target="_blank" class="text-decoration-none">
                                 <div class="card sub-template-card">
-                                    <img src="images/plantillas/clasico-moderno/plantilla-1.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 1">
+                                    <img src="images/plantillas/restaurantes.webp" class="card-img-top" alt="Detalle de plantilla Restaurante 1">
                                     <div class="card-body text-center">
-                                        <h6 class="card-title mb-0">Variación "Café Rústico"</h6>
+                                        <h6 class="card-title mb-0">Gourmet</h6>
                                     </div>
                                 </div>
                             </a>
@@ -372,18 +386,7 @@ Generated html
                         <div class="col-12 col-sm-6 col-lg-3 mb-4">
                             <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
                                 <div class="card sub-template-card">
-                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 2">
-                                    <div class="card-body text-center">
-                                        <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <div class="col-12 col-sm-6 col-lg-3 mb-4">
-                            <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
-                                <div class="card sub-template-card">
-                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 2">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Restaurante 2">
                                     <div class="card-body text-center">
                                         <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
                                     </div>
@@ -391,17 +394,30 @@ Generated html
                             </a>
                         </div>
 
+                        <!-- Sub-Plantilla 1.3 -->
                         <div class="col-12 col-sm-6 col-lg-3 mb-4">
                             <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
                                 <div class="card sub-template-card">
-                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 2">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Restaurante 3">
                                     <div class="card-body text-center">
                                         <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <!-- Puedes añadir más sub-plantillas aquí -->
+
+                        <!-- Sub-Plantilla 1.4 -->
+                        <div class="col-12 col-sm-6 col-lg-3 mb-4">
+                            <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
+                                <div class="card sub-template-card">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Restaurante 4">
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        
                     
                     </div>
                 </div>
@@ -409,24 +425,22 @@ Generated html
         </div>
     </div>
 
-    <!-- Modal 2: Corresponde a la tarjeta con data-bs-target="#modal-gourmet" -->
-    <div class="modal fade" id="modal-gourmet" tabindex="-1" aria-labelledby="modalGourmetLabel" aria-hidden="true">
+    <!-- Modal 2: Corresponde a la tarjeta con data-bs-target="#modal-pasteleria" -->
+    <div class="modal fade" id="modal-pasteleria" tabindex="-1" aria-labelledby="modalPasteleriaLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalGourmetLabel">Plantillas: Gourmet Oscuro</h5>
+                    <h5 class="modal-title" id="modalPasteleriaLabel">Plantillas: Pasteleria</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p class="lead text-center mb-4">Haz clic en cualquier plantilla para ver una demostración en vivo.</p>
-                    <!-- Usamos el sistema de rejilla de Bootstrap -->
                     <div class="row g-4">
                         <!-- Sub-Plantilla 1.1 -->
-                        <div class="col-12 col-sm-6 col-lg-3 mb-4"> <!-- En pantallas grandes (lg), ocupa la mitad (6 de 12 columnas)-->
-                            <!-- La etiqueta 'a' hace que toda la tarjeta sea un enlace -->
+                        <div class="col-12 col-sm-6 col-lg-3 mb-4">
                             <a href="https://ejemplo.com/demo/clasico-moderno-1" target="_blank" class="text-decoration-none">
                                 <div class="card sub-template-card">
-                                    <img src="images/plantillas/clasico-moderno/plantilla-1.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 1">
+                                    <img src="images/plantillas/plantillas-pastelerias/pastelerias.webp" class="card-img-top" alt="Detalle de plantilla Pasteleria 1">
                                     <div class="card-body text-center">
                                         <h6 class="card-title mb-0">Variación "Café Rústico"</h6>
                                     </div>
@@ -438,7 +452,7 @@ Generated html
                         <div class="col-12 col-sm-6 col-lg-3 mb-4">
                             <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
                                 <div class="card sub-template-card">
-                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 2">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Pasteleria 2">
                                     <div class="card-body text-center">
                                         <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
                                     </div>
@@ -446,17 +460,17 @@ Generated html
                             </a>
                         </div>
                         
+                        <!-- Sub-Plantilla 1.3 -->
                         <div class="col-12 col-sm-6 col-lg-3 mb-4">
                             <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
                                 <div class="card sub-template-card">
-                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 2">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Pasteleria 3">
                                     <div class="card-body text-center">
                                         <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <!-- Puedes añadir más sub-plantillas aquí -->
                     
                     </div>
                 </div>
@@ -464,24 +478,22 @@ Generated html
         </div>
     </div>
 
-    <!-- Modal 3: Corresponde a la tarjeta con data-bs-target="#modal-minimalista" -->
-    <div class="modal fade" id="modal-minimalista" tabindex="-1" aria-labelledby="modalMinimalistaLabel" aria-hidden="true">
+    <!-- Modal 3: Corresponde a la tarjeta con data-bs-target="#modal-comida-rapida" -->
+    <div class="modal fade" id="modal-comida-rapida" tabindex="-1" aria-labelledby="modalComidaRapidaLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalMinimalistaLabel">Plantillas: Minimalista Fresco</h5>
+                    <h5 class="modal-title" id="modalComidaRapidaLabel">Plantillas: Comida Rapida</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p class="lead text-center mb-4">Haz clic en cualquier plantilla para ver una demostración en vivo.</p>
-                    <!-- Usamos el sistema de rejilla de Bootstrap -->
                     <div class="row g-4">
                         <!-- Sub-Plantilla 1.1 -->
-                        <div class="col-12 col-sm-6 col-lg-3 mb-4"> <!-- En pantallas grandes (lg), ocupa la mitad (6 de 12 columnas)-->
-                            <!-- La etiqueta 'a' hace que toda la tarjeta sea un enlace -->
+                        <div class="col-12 col-sm-6 col-lg-3 mb-4">
                             <a href="https://ejemplo.com/demo/clasico-moderno-1" target="_blank" class="text-decoration-none">
                                 <div class="card sub-template-card">
-                                    <img src="images/plantillas/clasico-moderno/plantilla-1.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 1">
+                                    <img src="images/plantillas/plantillas-comida-rapida/comida-rapida.webp" class="card-img-top" alt="Detalle de plantilla Comida rápida 1">
                                     <div class="card-body text-center">
                                         <h6 class="card-title mb-0">Variación "Café Rústico"</h6>
                                     </div>
@@ -493,7 +505,7 @@ Generated html
                         <div class="col-12 col-sm-6 col-lg-3 mb-4">
                             <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
                                 <div class="card sub-template-card">
-                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 2">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Comida rápida 2">
                                     <div class="card-body text-center">
                                         <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
                                     </div>
@@ -501,17 +513,17 @@ Generated html
                             </a>
                         </div>
                         
+                        <!-- Sub-Plantilla 1.3 -->
                         <div class="col-12 col-sm-6 col-lg-3 mb-4">
                             <a href="https://ejemplo.com/demo/clasico-moderno-2" target="_blank" class="text-decoration-none">
                                 <div class="card sub-template-card">
-                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Clásico Moderno 2">
+                                    <img src="images/plantillas/clasico-moderno/plantilla-2.jpg" class="card-img-top" alt="Detalle de plantilla Comida rápida 3">
                                     <div class="card-body text-center">
                                         <h6 class="card-title mb-0">Variación "Bistro Elegante"</h6>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <!-- Puedes añadir más sub-plantillas aquí -->
                     
                     </div>
                 </div>
@@ -532,12 +544,13 @@ Generated html
         </div>
     </footer>
 
-    <!-- ==== CAMBIO: Enlace al paquete JS de Bootstrap 5 ==== -->
-    <!-- Esto incluye Popper.js y es necesario para componentes como el menú desplegable. -->
-    <!-- Se coloca al final del body para un mejor rendimiento de carga. -->
+    <!-- ==== Enlace al paquete JS de Bootstrap 5 ==== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
-    <!-- Enlace a tu archivo JavaScript personalizado (se mantiene) -->
+    <!-- Librería IntlTelInput -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+
+    <!-- Archivo JavaScript personalizado -->
     <script src="js/script.js"></script>
 </body>
 </html>
